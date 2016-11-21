@@ -1,32 +1,32 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 void quick_sort(int n[],int left,int right)  
 {
 	int tmp=n[left];
 	int i=left,j=right;
 	int t=0;
-	if (i>j)            //i>jÔòÒÑ¾­Íê³É 
+	if (i>j)            //i>jåˆ™å·²ç»å®Œæˆ 
 	{
 		return;
 	}
-	while (i<j)         //Á½¸öÉÚ±øi,j»¹Î´ÅöÍ·Ê± 
+	while (i<j)         //ä¸¤ä¸ªå“¨å…µi,jè¿˜æœªç¢°å¤´æ—¶ 
 	{
 		while (n[j]>=tmp && i<j)
 		{
-			j--;      //ÉÚ±øj´ÓÓÒÍù×óÕÒµ½µÚÒ»¸ö±ÈtmpĞ¡µÄÊı 
+			j--;      //å“¨å…µjä»å³å¾€å·¦æ‰¾åˆ°ç¬¬ä¸€ä¸ªæ¯”tmpå°çš„æ•° 
 		}
 		while (n[i]<=tmp && i<j)
 		{
-			i++;     //ÉÚ±øi´Ó×óÍùÓÒÕÒµ½µÚÒ»¸ö±Ètmp´óµÄÊı 
+			i++;     //å“¨å…µiä»å·¦å¾€å³æ‰¾åˆ°ç¬¬ä¸€ä¸ªæ¯”tmpå¤§çš„æ•° 
 		}
 		if (i<j){
-			t=n[j];n[j]=n[i];n[i]=t;	//½»»»ÄÇÁ½¸öÊı 
+			t=n[j];n[j]=n[i];n[i]=t;	//äº¤æ¢é‚£ä¸¤ä¸ªæ•° 
 		}
 	}
-	n[left]=n[i]; //»Ø¹éÖĞ¼äÊı 
+	n[left]=n[i]; //å›å½’ä¸­é—´æ•° 
 	n[i]=tmp;
-	quick_sort(n,left,i-1);//¶Ô×ó¶Ë½øĞĞÏàÍ¬²Ù×÷ 
+	quick_sort(n,left,i-1);//å¯¹å·¦ç«¯è¿›è¡Œç›¸åŒæ“ä½œ 
 
-	quick_sort(n,i+1,right);//¶ÔÓÒ¶Ë½øĞĞÏàÍ¬²Ù×÷ 
+	quick_sort(n,i+1,right);//å¯¹å³ç«¯è¿›è¡Œç›¸åŒæ“ä½œ 
 	for (int i=0;i<5;i++)
  	{
 	 	printf("%d ",n[i]);
