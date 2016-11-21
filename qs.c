@@ -34,7 +34,7 @@ void quick_sort(int n[],int left,int right)
 }
 int main()
 {
-	int cnt=5,n[5]={1,4,3,5,2};
+	int cnt=5,n[5]={0,4,3,5,2};
  	quick_sort (n,0,cnt-1);
  	for (int i=0;i<cnt;i++)
  	{
